@@ -1,0 +1,94 @@
+<p>home works!</p>
+my name is:-{{name}}
+<button (click)="clicks()">click me</button>
+<input type="text" (click)="manual($event) " placeholder="type and click o me">
+<input type="text" [(ngModel)]="age" maxlength="20">
+my age is:-{{age}}<br>
+{{age.length}}
+
+
+<div *ngFor="let ob of obj">
+{{ob.name}}
+</div>
+<div *ngFor="let color of colors;index as i,odd as o,even as e">
+{{i}}:{{color}}:{{o}}:{{e}}
+</div>
+
+
+<div *ngIf=true>success</div>
+<button *ngIf="show" (click)="login()">log in</button>
+<button *ngIf="!show" (click)="logout()">log out</button>
+
+<div [ngSwitch]="case">
+  <div *ngSwitchCase="'one'" >number one</div>
+  <div *ngSwitchCase="'two'" >number two</div>
+  <div *ngSwitchCase="'three'" >number three</div>
+</div>
+
+<p [ngClass]="'one'">class with string</p>
+<p [ngClass]="['two']">class with array</p>
+<p [ngClass]="{'three':true}">class with object</p>
+
+<h2 [ngStyle]="{
+    'color':color,
+    'background-color':bgcolor
+}">style directive</h2>
+
+<p>{{upper|uppercase}}</p>
+<p>{{lower|lowercase}}</p>
+<p>{{date}}</p>
+<p>{{date|date:'longDate'}}</p>
+<p>{{date|date:'shortDate'}}</p>
+<p>{{date|date:'fullDate'}}</p>
+<p>{{price|currency:'INR'}}</p>
+<p>{{price|number:'0.4-5'}}</p>
+<p>{{price|percent:'0.4-5'}}</p>
+{{y}}<br>
+{{x}}
+
+<div *ngFor="let objoo of objo|keyvalue">
+    {{objoo.key}}--->{{objoo.value}}
+</div>
+
+<div *ngFor="let objoo of obj">
+  
+</div>
+
+
+{{tit}}<br>
+
+<button (click)="senddata()">child to parent</button>
+
+{{name}}
+{{previous}}
+{{current}}
+
+
+<button (click)="destroy()">ngDestoy</button>
+{{counts}}
+
+<form [formGroup]="myform">
+<input type="text" name="uname" formControlName='uname'>
+<input type="email" name="usere" formControlName='usere'>
+
+</form>
+<button (click)="shown()">submit</button>
+<p *ngIf="myform.controls.uname.errors">pls enter min 8 cvhar</p>
+
+  <form [formGroup]="sk">
+  <div formArrayName="skillsss">
+    <div *ngFor="let skill of sk.controls.skillsss.controls;let i=index">
+      <input type="text"  formControlName={{i}}> 
+  </div>
+</div>
+</form>
+<button (click)="add()">add array</button>
+    {{wi}}
+
+{{user}}
+
+
+
+
+
+

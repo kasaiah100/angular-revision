@@ -1,0 +1,7 @@
+<p>ngtemplate works!</p>
+<div *ngIf="false;else elseblock">true block</div>
+<ng-template #elseblock>else block</ng-template>
+<input type="text" #temp>
+<button (click)="fun(temp.value)">button</button>
+{{text}}
+<h2 *ngTemplateOutlet="elseblock"></h2>

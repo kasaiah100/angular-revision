@@ -1,0 +1,5 @@
+<p>user works!</p>
+<div *ngFor="let users of usersCard">
+    <h3>{{users.name}}</h3>
+   <span><a [routerLink]="['/profile',users.name]" [queryParams]="{papulor:'yes',people:'yes'}">profile</a></span> 
+</div>

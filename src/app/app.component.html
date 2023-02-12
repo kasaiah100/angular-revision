@@ -1,0 +1,22 @@
+n<app-home *ngIf='!a' (send)='childerntwo=$event' #childern [tit]="title" ></app-home><br>
+{{childerntwo}}
+<input type="text" [(ngModel)]="title">
+<button (click)="des()">destroy</button><br>
+<button routerLink="/landing">landing page</button>
+<button routerLink="/lazy">lazy</button>
+<router-outlet></router-outlet>
+<app-ngcontent>
+    <div #one class="one">one ng content</div>
+    <div #two id="two">two ng content</div>
+    <div #three title="three">three ng content</div>
+    <div #four ngProjectAs="four">four ng content</div>
+    <div  #five class="five">five ng content</div>
+    <div  #five class="five">six ng content</div>
+    <div #five  class="five">seven ng content</div>
+
+</app-ngcontent>
+
+<app-ngtemplate></app-ngtemplate>
+<app-directive></app-directive>
+<app-observable></app-observable>
+

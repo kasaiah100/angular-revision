@@ -1,0 +1,5 @@
+<p>products works!</p>
+<div *ngFor="let item of items;let i=index">
+    <h3>{{item.brand}}</h3>
+    <span><a [routerLink]="['/item',item.brand]">Items</a></span> 
+</div>
